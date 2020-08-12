@@ -5,6 +5,7 @@ a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+  font-size: 35px;
 }
 
 /* Provide sufficient contrast against white background */
@@ -68,4 +69,18 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+
+.nav-link {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+p, h1, h2, h3, h4, h5, h6, div, text, li, th, td, dt, dd, a, strong {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

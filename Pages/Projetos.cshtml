@@ -1,0 +1,76 @@
+﻿@page
+@model ProfessionalHomePage.Pages.ProjetosModel
+@{
+    ViewData["Title"] = "Projetos";
+}
+
+<hr />
+<h3>Projetos</h3>
+<br />
+
+<div class="card-deck">
+    <div class="card mb-3 shadow-sm" style="max-width: 540px;">
+        <div class="row no-gutters">
+            <div class="col-md-4 align-self-center d-flex justify-content-center">
+                <img src="./imagens/geoservicos.png" style="width: 7rem;" class="card-img align-self-center" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <a href="https://www.tecsystem.com.br/geoservicos" target="_blank" class="btn btn-outline-dark float-right">Conheça</a>
+                    <h4 class="card-title">Tecsystem</h4>
+                    <p class="card-text">Geoserviços</p>
+                    <p class="card-text">
+                        <small class="text-muted">
+                            O Geoserviços é um software para conduzir a gestão dos serviços públicos, garantindo resposta
+                            rápida e definitiva aos problemas, traçando uma rota segura para o desenvolvimento municipal.
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3 shadow-sm" style="max-width: 540px;">
+        <div class="row no-gutters">
+            <div class="col-md-4 align-self-center d-flex justify-content-center">
+                <img src="./imagens/logo-acquajr.bmp" style="width: 8rem;" class="card-img align-self-center" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <a [routerLink]="['/projetos/acqua-jr-application']" class="btn btn-outline-dark float-right">Conheça</a>
+                    <h4 class="card-title">Acqua Júnior</h4>
+                    <p class="card-text">Acqua Jr. Application</p>
+                    <p class="card-text">
+                        <small class="text-muted">
+                            Acqua Jr. Application é o um sistema de informação para a
+                            gestão de dados e processos de trabalho da empresa Acqua Jr.. O sistema gerencia todas
+                            as informações relevantes da empresa, oferecendo controle às suas principais atividades de negócio.
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-deck">
+    <div class="card mb-3 shadow-sm" style="max-width: 540px;">
+        <div class="row no-gutters">
+            <div class="col-md-4 align-self-center d-flex justify-content-center">
+                <img src="./imagens/imagen_digital.png" style="width: 8rem;" class="card-img align-self-center" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <a href="mailto:vctr-moraes@protonmail.com" class="btn btn-outline-dark float-right">Contato</a>
+                    <h4 class="card-title">Sua Empresa</h4>
+                    <p class="card-text">Seu Projeto</p>
+                    <p class="card-text">
+                        <small class="text-muted">
+                            xxxxxxx xxxxxxxx xxxxx xxxxxxxxxxxx xxxxxxxx x xxxxxxxxx xxxxxxxxxxxx xxxxxxxxx xxxxxxxxx
+                            xxxxxxx xxxxxxxx xxxxx xxxxxxxxxxxx xxxxxxxx x xxxxxxxxx xxxxxxxxxxxx xxxxxxxxx xxxxxxxxx
+                            xxxxxxx xxxxxxxx xxxxx xxxxxxxxxxxx
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
