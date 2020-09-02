@@ -84,3 +84,7 @@ p, h1, h2, h3, h4, h5, h6, div, text, li, th, td, dt, dd, a, strong {
   -ms-user-select: none;
   user-select: none;
 }
+
+.cor-background {
+    background-color: #fafafa;
+}
