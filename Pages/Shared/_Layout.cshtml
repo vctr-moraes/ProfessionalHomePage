@@ -1,80 +1,125 @@
 ﻿<!DOCTYPE html>
 <html lang="en" class="cor-background">
-<head>
-    <meta charset="utf-8" />
-    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Victor Moraes - Professional Home Page</title>
-    
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/lib/fonts/css.css">
-    <link rel="stylesheet" href="~/lib/fonts/icon.css">
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/material.min.css" />
-    <link rel="stylesheet" href="~/lib/lightbox/dist/css/lightbox.min.css" />
-</head>
-<body class="cor-background">
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light cor-background" style="padding-top:25px;">
-            <div class="container">
-                <h2><a class="text-black-50" asp-page="/Index" style="text-decoration:none;">Victor Moraes</a></h2>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow">
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-outline-dark" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-outline-dark" asp-page="/Sobre">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-outline-dark" asp-page="/Projetos">Projetos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-outline-dark" asp-page="/Tecnologias">Tecnologias</a>
-                        </li>
-                    </ul>
+        <title>Victor Moraes - Professional Home Page</title>
+
+        @*Bootstrap core css*@
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+        @*Animation CSS*@
+        <link href="~/lib/landing_page/css/animate.css" rel="stylesheet" />
+        <link href="~/lib/landing_page/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+        @*Custom styles for this template*@
+        <link href="~/lib/landing_page/css/style.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="~/lib/lightbox/dist/css/lightbox.min.css" />
+    </head>
+    <body id="page-top" class="landing-page no-skin-config">
+        <div class="navbar-wrapper">
+            <nav class="navbar navbar-default navbar-fixed-top navbar-expand-md" role="navigation">
+                <div class="container">
+                    <a class="navbar-brand" style="font-size:20px;" href="/">Victor Moraes</a>
+                    <div class="navbar-header page-scroll">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class="nav-link page-scroll" href="#page-top">Home</a></li>
+                            <li><a class="nav-link page-scroll" href="#sobre-mim">Sobre mim</a></li>
+                            <li><a class="nav-link page-scroll" href="#formacao">Formação</a></li>
+                            <li><a class="nav-link page-scroll" href="#projetos">Projetos</a></li>
+                            <li><a class="nav-link page-scroll" href="#tecnologias">Tecnologias</a></li>
+                            <li><a class="nav-link page-scroll" href="#contato">Contato</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-    <br /><br />
-    <footer class="border-top footer text-black-50" style="position:absolute;">
-        <div class="container">
-            &copy; @DateTime.Now.Year - Victor Moraes - Analista de Desenvolvimento de Sistemas
-            <div class="float-right d-sm-inline-flex">
-                <a class="text-info" target="_blank" href="https://www.linkedin.com/in/victormoraesti/" style="text-decoration:none;">
-                    <strong>
-                        LinkedIn
-                    </strong>
-                </a>
-                &nbsp; - &nbsp;
-                <a class="text-info" target="_blank" href="https://github.com/vctr-moraes" style="text-decoration:none;">
-                    <strong>
-                        GitHub
-                    </strong>
-                </a>
-                &nbsp; - &nbsp;
-                <a class="text-info" target="_blank" href="mailto:vctr.moraes@protonmail.com" style="text-decoration:none;">
-                    <strong>
-                        E-mail
-                    </strong>
-                </a>
-            </div>
+            </nav>
         </div>
-    </footer>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/popper/popper.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/material.min.js"></script>
-    <script src="~/lib/lightbox/dist/js/lightbox.min.js"></script>
-    @RenderSection("Scripts", required: false)
-</body>
+        <div class="">
+            <main role="main">
+                @RenderBody()
+            </main>
+        </div>
+
+        @*Mainly scripts*@
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/popper/popper.min.js"></script>
+        @*<script src="~/lib/landing_page/js/bootstrap.min.js"></script>*@
+        <script src="~/lib/popper/bootstrap.min.js"></script>
+        <script src="~/lib/landing_page/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        <script src="~/lib/landing_page/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+        @*Custom and plugin javascript*@
+        <script src="~/lib/landing_page/js/inspinia.js"></script>
+        <script src="~/lib/landing_page/js/plugins/pace/pace.min.js"></script>
+        <script src="~/lib/landing_page/js/classie.js"></script>
+        <script src="~/lib/landing_page/js/cbpAnimatedHeader.js"></script>
+        <script src="~/lib/landing_page/js/plugins/wow/wow.min.js"></script>
+
+        <script src="~/lib/lightbox/dist/js/lightbox.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        @RenderSection("Scripts", required: false)
+
+        <script>
+            $(document).ready(function () {
+                $('body').scrollspy({
+                    target: '#navbar',
+                    offset: 80
+                });
+
+                // Page scrolling feature
+                $('a.page-scroll').bind('click', function (event) {
+                    var link = $(this);
+                    $('html, body').stop().animate({
+                        scrollTop: $(link.attr('href')).offset().top - 50
+                    }, 500);
+                    event.preventDefault();
+                    $("#navbar").collapse('hide');
+                });
+            });
+
+            var cbpAnimatedHeader = (function () {
+                var docElem = document.documentElement,
+                    header = document.querySelector('.navbar-default'),
+                    didScroll = false,
+                    changeHeaderOn = 200;
+
+                function init() {
+                    window.addEventListener('scroll', function (event) {
+                        if (!didScroll) {
+                            didScroll = true;
+                            setTimeout(scrollPage, 250);
+                        }
+                    }, false);
+                }
+
+                function scrollPage() {
+                    var sy = scrollY();
+                    if (sy >= changeHeaderOn) {
+                        $(header).addClass('navbar-scroll')
+                    }
+                    else {
+                        $(header).removeClass('navbar-scroll')
+                    }
+                    didScroll = false;
+                }
+
+                function scrollY() {
+                    return window.pageYOffset || docElem.scrollTop;
+                }
+
+                init();
+            })();
+
+            // Activate WOW.js plugin for animation on scrol
+            new WOW().init();
+        </script>
+    </body>
 </html>
